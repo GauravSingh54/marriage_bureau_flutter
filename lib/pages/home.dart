@@ -12,24 +12,57 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(
+      body: Center(
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                Color.fromARGB(255, 245, 141, 176),
-                Colors.white,
-              ]
-            ),
-            image: DecorationImage(
-              image: AssetImage('assets/logo 1.png'),
-            ),
-            
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Color.fromARGB(255, 245, 141, 176),
+                  Colors.white,
+                ]),
           ),
-          
-          
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset('assets/logo 1.png'),
+              Container(
+                  padding: const EdgeInsets.all(40),
+                  child: ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.mail,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                    label: const Text(
+                      "Sign Up With Email",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pinkAccent,
+                    ),
+                  )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding:  EdgeInsets.all(8.0),
+                    child:  Text('Already have an account?'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pinkAccent,
+                    ),
+                    child: const Text('Login In', style: TextStyle(color: Colors.white),),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
