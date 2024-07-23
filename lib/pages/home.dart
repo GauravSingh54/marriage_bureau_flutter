@@ -50,10 +50,12 @@ class _HomeState extends State<Home> {
                 children: [
                   const Padding(
                     padding:  EdgeInsets.all(8.0),
-                    child:  Text('Already have an account?'),
+                    child:  Text('Already have an account?', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/login');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.pinkAccent,
                     ),

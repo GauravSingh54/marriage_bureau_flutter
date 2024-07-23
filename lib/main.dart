@@ -9,5 +9,7 @@ void main() => runApp(MaterialApp(
   routes: {
     '/': (context) => const Loading(),
     '/home': (context) => const Home(),
+    '/login': (context) => const Login(),
+    '/signup': (context) => const Signup(),
   },
 ));
