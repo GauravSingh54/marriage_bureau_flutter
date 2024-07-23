@@ -31,7 +31,9 @@ class _HomeState extends State<Home> {
               Container(
                   padding: const EdgeInsets.all(40),
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/signup');
+                    },
                     icon: const Icon(
                       Icons.mail,
                       color: Colors.white,
