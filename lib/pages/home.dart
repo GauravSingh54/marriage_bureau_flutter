@@ -8,6 +8,16 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  late List<String> countries;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final args = ModalRoute.of(context)!.settings.arguments as Map;
+    countries = args['countries'];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +42,11 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(40),
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/signup');
+                      Navigator.pushReplacementNamed(
+                        context, 
+                        '/signup', 
+                        arguments: {'countries': countries},
+                      );
                     },
                     icon: const Icon(
                       Icons.mail,
