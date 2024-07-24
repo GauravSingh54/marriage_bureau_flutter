@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -10,15 +8,19 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
   late List<String> countries;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final args = ModalRoute.of(context)!.settings.arguments as Map;
-    countries = args['countries'];
+    final args = ModalRoute.of(context)!.settings.arguments as Map?;
+    if (args != null) {
+      countries = args['countries'] ?? [];
+    } else {
+      countries = []; // Default to empty list if arguments are null
+    }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +44,7 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   controller: TextEditingController(),
                   decoration: const InputDecoration(
-                    labelText: ('Email Id'),
+                    labelText: 'Email Id',
                     labelStyle: TextStyle(color: Colors.white),
                     prefixIcon: Icon(
                       Icons.person_outline_sharp,
@@ -62,7 +64,7 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   controller: TextEditingController(),
                   decoration: const InputDecoration(
-                    labelText: ('Password'),
+                    labelText: 'Password',
                     labelStyle: TextStyle(color: Colors.white),
                     prefixIcon: Icon(
                       Icons.fingerprint_rounded,
@@ -95,35 +97,43 @@ class _LoginState extends State<Login> {
                   'Login',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                 ),
-                style:  ButtonStyle(
+                style: ButtonStyle(
                   backgroundColor: const WidgetStatePropertyAll<Color>(Colors.white),
-                  shape: WidgetStatePropertyAll<RoundedRectangleBorder>(RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    side: const BorderSide(color: Colors.pink, width: 1)
-                  ))
+                  shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      side: const BorderSide(color: Colors.pink, width: 1),
+                    ),
+                  ),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
               child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Padding(
-                      padding:  EdgeInsets.all(8.0),
-                      child:  Text('Register you Account?', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Register your Account?',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/signup');
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.pinkAccent,
-                      ),
-                      child: const Text('Register', style: TextStyle(color: Colors.white),),
-                    )
-                  ],
-                ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/signup', arguments: {'countries': countries},);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pinkAccent,
+                    ),
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),

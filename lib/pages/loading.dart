@@ -11,7 +11,6 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-
   List<String> countries = [];
 
   void setupMarriageBureau() async {
@@ -29,6 +28,7 @@ class _LoadingState extends State<Loading> {
       List<dynamic> data = jsonDecode(response.body);
       setState(() {
         countries = data.map((country) => country['name']['common'] as String).toList();
+        countries.sort((a, b) => a.compareTo(b));  // Sort countries alphabetically
       });
     } else {
       throw Exception('Failed to load countries');
