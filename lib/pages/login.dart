@@ -10,6 +10,15 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  late List<String> countries;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final args = ModalRoute.of(context)!.settings.arguments as Map;
+    countries = args['countries'];
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
