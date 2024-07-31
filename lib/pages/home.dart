@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   late List<String> countries;
 
   @override
@@ -38,38 +39,34 @@ class _HomeState extends State<Home> {
             children: [
               Image.asset('assets/logo 1.png'),
               Container(
-                padding: const EdgeInsets.all(40),
-                child: ElevatedButton.icon(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                      context,
-                      '/signup',
-                      arguments: {'countries': countries},
-                    );
-                  },
-                  icon: const Icon(
-                    Icons.mail,
-                    color: Colors.white,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    "Sign Up With Email",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.pinkAccent,
-                  ),
-                ),
-              ),
+                  padding: const EdgeInsets.all(40),
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context, 
+                        '/signup', 
+                        arguments: {'countries': countries},
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.mail,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                    label: const Text(
+                      "Sign Up With Email",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pinkAccent,
+                    ),
+                  )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Already have an account?',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
+                    padding:  EdgeInsets.all(8.0),
+                    child:  Text('Already have an account?', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -78,10 +75,7 @@ class _HomeState extends State<Home> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.pinkAccent,
                     ),
-                    child: const Text(
-                      'Login In',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    child: const Text('Login In', style: TextStyle(color: Colors.white),),
                   )
                 ],
               )
