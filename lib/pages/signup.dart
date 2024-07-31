@@ -254,7 +254,9 @@ class _SignupState extends State<Signup> {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/login');
+                        Navigator.pushReplacementNamed(context, '/login' , arguments: {
+      'countries': countries,
+    });
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.pinkAccent,
