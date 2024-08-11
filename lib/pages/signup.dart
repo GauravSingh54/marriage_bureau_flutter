@@ -360,17 +360,28 @@ class _SignupState extends State<Signup> {
               Image.asset('assets/logo 1.png'),
               const Text('Register to your account'),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: SizedBox(
                   width: 300,
                   child: TextFormField(
                     controller: TextEditingController(),
                     decoration: const InputDecoration(
-                      labelText: 'Looking For *',
-                      labelStyle: TextStyle(color: Colors.white),
+                      hintText: 'Looking For *',
+                      hintStyle: TextStyle(color: Colors.white),
                       prefixIconColor: Colors.white,
                       fillColor: Colors.pinkAccent,
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -382,17 +393,28 @@ class _SignupState extends State<Signup> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: SizedBox(
                   width: 300,
                   child: TextFormField(
                     controller: TextEditingController(),
                     decoration: const InputDecoration(
-                      labelText: 'Username *',
-                      labelStyle: TextStyle(color: Colors.white),
+                      hintText: 'Username *',
+                      hintStyle: TextStyle(color: Colors.white),
                       prefixIconColor: Colors.white,
                       fillColor: Colors.pinkAccent,
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -411,15 +433,29 @@ class _SignupState extends State<Signup> {
                     SizedBox(
                       width: 140,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         child: TextFormField(
                           controller: TextEditingController(),
                           decoration: const InputDecoration(
-                            labelText: 'First Name *',
-                            labelStyle: TextStyle(color: Colors.white),
+                            hintText: 'First Name *',
+                            hintStyle: TextStyle(color: Colors.white),
                             prefixIconColor: Colors.white,
                             fillColor: Colors.pinkAccent,
                             filled: true,
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -433,15 +469,29 @@ class _SignupState extends State<Signup> {
                     SizedBox(
                       width: 140,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         child: TextFormField(
                           controller: TextEditingController(),
                           decoration: const InputDecoration(
-                            labelText: 'Last Name *',
-                            labelStyle: TextStyle(color: Colors.white),
+                            hintText: 'Last Name *',
+                            hintStyle: TextStyle(color: Colors.white),
                             prefixIconColor: Colors.white,
                             fillColor: Colors.pinkAccent,
                             filled: true,
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
+                              borderSide: BorderSide(color: Colors.transparent),
+                            ),
                           ),
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -456,17 +506,28 @@ class _SignupState extends State<Signup> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: SizedBox(
                   width: 300,
                   child: TextFormField(
                     controller: TextEditingController(),
                     decoration: const InputDecoration(
-                      labelText: 'E Mail Address *',
-                      labelStyle: TextStyle(color: Colors.white),
+                      hintText: 'E Mail Address *',
+                      hintStyle: TextStyle(color: Colors.white),
                       prefixIconColor: Colors.white,
                       fillColor: Colors.pinkAccent,
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -478,7 +539,7 @@ class _SignupState extends State<Signup> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Center(
                   child: Container(
                     width: 300,
@@ -508,6 +569,22 @@ class _SignupState extends State<Signup> {
                                 hintStyle: TextStyle(color: Colors.white),
                                 fillColor: Colors.pinkAccent,
                                 filled: true,
+                                border: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0)),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.transparent),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0)),
+                                  borderSide:
+                                      BorderSide(color: Colors.transparent),
+                                ),
                               ),
                               dropdownColor: Colors.pinkAccent,
                             ),
@@ -519,34 +596,63 @@ class _SignupState extends State<Signup> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: SizedBox(
-                      width: 60,
+                      width: 80,
                       child: TextFormField(
                         controller: TextEditingController(text: selectedCode),
                         readOnly: true,
+                        style: TextStyle(color: Colors.white),
                         decoration: const InputDecoration(
-                          labelText: 'Country Code',
-                          labelStyle: TextStyle(color: Colors.white),
+                          hintText: 'Country Code',
+                          hintStyle: TextStyle(color: Colors.white),
                           prefixIconColor: Colors.white,
                           fillColor: Colors.pinkAccent,
                           filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            borderSide: BorderSide(color: Colors.transparent),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            borderSide: BorderSide(color: Colors.transparent),
+                          ),
                         ),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 12, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     child: SizedBox(
-                      width: 220,
+                      width: 200,
                       child: TextFormField(
                         controller: TextEditingController(),
                         decoration: const InputDecoration(
-                          labelText: 'Contact Number *',
-                          labelStyle: TextStyle(color: Colors.white),
+                          hintText: 'Contact Number *',
+                          hintStyle: TextStyle(color: Colors.white),
                           prefixIconColor: Colors.white,
                           fillColor: Colors.pinkAccent,
                           filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            borderSide: BorderSide(color: Colors.transparent),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.0)),
+                            borderSide: BorderSide(color: Colors.transparent),
+                          ),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -560,17 +666,28 @@ class _SignupState extends State<Signup> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: SizedBox(
                   width: 300,
                   child: TextFormField(
                     controller: TextEditingController(),
                     decoration: const InputDecoration(
-                      labelText: 'Password *',
-                      labelStyle: TextStyle(color: Colors.white),
+                      hintText: 'Password *',
+                      hintStyle: TextStyle(color: Colors.white),
                       prefixIconColor: Colors.white,
                       fillColor: Colors.pinkAccent,
                       filled: true,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        borderSide: BorderSide(color: Colors.transparent),
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -600,7 +717,7 @@ class _SignupState extends State<Signup> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

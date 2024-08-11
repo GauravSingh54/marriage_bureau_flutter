@@ -44,8 +44,8 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   controller: TextEditingController(),
                   decoration: const InputDecoration(
-                    labelText: ('Email Id'),
-                    labelStyle: TextStyle(color: Colors.white),
+                    hintText: ('Email Id'),
+                    hintStyle: TextStyle(color: Colors.white),
                     prefixIcon: Icon(
                       Icons.person_outline_sharp,
                       size: 40,
@@ -53,6 +53,17 @@ class _LoginState extends State<Login> {
                     prefixIconColor: Colors.white,
                     fillColor: Colors.pinkAccent,
                     filled: true,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
                   ),
                 ),
               ),
@@ -64,8 +75,8 @@ class _LoginState extends State<Login> {
                 child: TextField(
                   controller: TextEditingController(),
                   decoration: const InputDecoration(
-                    labelText: ('Password'),
-                    labelStyle: TextStyle(color: Colors.white),
+                    hintText: ('Password'),
+                    hintStyle: TextStyle(color: Colors.white),
                     prefixIcon: Icon(
                       Icons.fingerprint_rounded,
                       size: 40,
@@ -73,6 +84,17 @@ class _LoginState extends State<Login> {
                     prefixIconColor: Colors.white,
                     fillColor: Colors.pinkAccent,
                     filled: true,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                      borderSide: BorderSide(color: Colors.transparent),
+                    ),
                   ),
                 ),
               ),
